@@ -1,4 +1,6 @@
-/* General settings */
+/* =========================
+   GENERAL SETTINGS
+========================= */
 
 * {
     margin: 0;
@@ -11,20 +13,36 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f7fb;
     color: #172033;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-/* Navigation bar */
+a {
+    transition: 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
 
 header {
     background-color: #101a30;
     padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
 }
 
 .logo {
@@ -32,12 +50,15 @@ header {
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .navbar ul {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 25px;
+    gap: 22px;
 }
 
 .navbar ul li a {
@@ -50,7 +71,9 @@ header {
     color: #59a6ff;
 }
 
-/* Home section */
+/* =========================
+   HOME / HERO SECTION
+========================= */
 
 .hero {
     display: flex;
@@ -75,16 +98,17 @@ header {
 
 .hero h1 {
     font-size: 43px;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 20px;
+    overflow-wrap: anywhere;
 }
 
 .hero h2 {
     font-size: 23px;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.hero h2,
 .hero p {
     margin-bottom: 20px;
 }
@@ -95,7 +119,10 @@ header {
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #59a6ff;
+    box-shadow: 0 0 30px rgba(89, 166, 255, 0.2);
 }
+
+/* HERO BUTTONS */
 
 .btn {
     display: inline-block;
@@ -105,87 +132,224 @@ header {
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
+    margin-right: 8px;
+    font-weight: bold;
 }
 
 .btn:hover {
     background-color: #175bb5;
+    transform: translateY(-2px);
 }
 
-/* General section design */
+/* =========================
+   GENERAL SECTION DESIGN
+========================= */
 
 .section {
     padding: 70px 8%;
+    scroll-margin-top: 100px;
 }
 
 .section h2 {
     font-size: 30px;
+    line-height: 1.4;
     margin-bottom: 20px;
     color: #101a30;
 }
 
 .section > p {
-    max-width: 800px;
+    max-width: 850px;
     margin-bottom: 25px;
+    color: #485469;
 }
 
-/* About section */
+/* =========================
+   ABOUT ME SECTION
+========================= */
+
+#about {
+    background-color: #f5f7fb;
+}
+
+#about > h2 {
+    text-align: center;
+    font-size: 34px;
+}
+
+#about > p {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+}
 
 .details {
-    margin-top: 25px;
+    margin-top: 30px;
     background-color: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e3e9f2;
+    box-shadow: 0 5px 20px rgba(16, 26, 48, 0.04);
+}
+
+.details h3 {
+    color: #174c91;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .details p {
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+    color: #485469;
+    overflow-wrap: anywhere;
 }
 
-/* Skills section */
+.details p:last-child {
+    margin-bottom: 0;
+}
+
+.details strong {
+    color: #101a30;
+}
+
+.details a {
+    color: #175bb5;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+#education {
+    background-color: #eaf0f8;
+}
+
+#education > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#education .details {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 5px solid #2878e5;
+}
+
+/* =========================
+   TECHNICAL SKILLS
+========================= */
+
+#skills {
+    background-color: white;
+}
+
+#skills > h2 {
+    text-align: center;
+}
+
+#skills > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .skills span {
     background-color: #dceaff;
     color: #174c91;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    border: 1px solid #c7dcff;
+    transition: 0.3s ease;
 }
 
-/* Projects section */
+.skills span:hover {
+    background-color: #2878e5;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Support for an alternative skills-list class */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skills-list span {
+    background-color: #eaf2ff;
+    color: #174ea6;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+#projects {
+    background-color: #eaf0f8;
+}
+
+#projects > h2 {
+    text-align: center;
+}
+
+#projects > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .project-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .project-card {
     background-color: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 28px;
+    border-radius: 10px;
     border: 1px solid #e0e5ed;
-    transition: transform 0.3s;
+    box-shadow: 0 5px 18px rgba(16, 26, 48, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(16, 26, 48, 0.1);
 }
 
 .project-card h3 {
     color: #174c91;
     font-size: 21px;
     margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .project-card p {
+    color: #485469;
     margin-bottom: 15px;
 }
 
@@ -197,48 +361,119 @@ header {
 }
 
 .project-card a:hover {
+    color: #2878e5;
     text-decoration: underline;
 }
 
 .status {
-    color: #626f82;
-    font-size: 14px;
+    display: inline-block;
+    background-color: #eef2f7;
+    color: #626f82 !important;
+    font-size: 13px;
     font-style: italic;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-top: 5px;
 }
 
-/* Contact section */
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    background-color: #101a30;
+    color: white;
+}
+
+#contact h2 {
+    color: white;
+    text-align: center;
+}
+
+#contact > p {
+    color: #d6deeb;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
 
 .contact-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .contact-links a {
     display: inline-block;
     background-color: #2878e5;
     color: white;
-    padding: 12px 25px;
+    padding: 12px 22px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
 .contact-links a:hover {
     background-color: #175bb5;
+    transform: translateY(-2px);
 }
 
-/* Footer */
+/* CONTACT INFORMATION CARD */
+
+#contact .details {
+    max-width: 700px;
+    margin: 30px auto 0;
+    background-color: #172640;
+    border: 1px solid #30415e;
+    box-shadow: none;
+}
+
+#contact .details h3 {
+    color: #59a6ff;
+}
+
+#contact .details p {
+    color: #e1e8f2;
+}
+
+#contact .details strong {
+    color: white;
+}
+
+#contact .details a {
+    color: #59a6ff;
+    overflow-wrap: anywhere;
+}
+
+#contact .details a:hover {
+    color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background-color: #101a30;
+    background-color: #0b1220;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 8%;
 }
 
-/* Mobile phone design */
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
 
-@media (max-width: 768px) {
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1000px) {
 
     header {
         padding: 20px 5%;
@@ -246,19 +481,68 @@ footer {
 
     .navbar {
         flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        justify-content: center;
         gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+}
+
+/* =========================
+   MOBILE PHONE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        position: static;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
     }
 
     .navbar ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 10px 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
     }
 
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 60px 5%;
+        padding: 55px 6%;
+        gap: 30px;
     }
 
     .hero h1 {
@@ -266,7 +550,7 @@ footer {
     }
 
     .hero h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .hero-image img {
@@ -274,15 +558,93 @@ footer {
         height: 200px;
     }
 
+    .hero .btn {
+        margin: 8px 4px;
+    }
+
     .section {
-        padding: 50px 5%;
+        padding: 50px 6%;
+    }
+
+    .section h2,
+    #about > h2 {
+        font-size: 27px;
+    }
+
+    .details {
+        padding: 22px;
+        margin-top: 22px;
+    }
+
+    .details h3 {
+        font-size: 20px;
     }
 
     .project-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 23px;
     }
 
     .skills {
         gap: 10px;
+    }
+
+    .skills span {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links a {
+        text-align: center;
+        width: 100%;
+    }
+
+    #contact .details {
+        padding: 22px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        gap: 8px 12px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .details {
+        padding: 18px;
+    }
+
+    .project-card {
+        padding: 18px;
+    }
+
+    .btn {
+        padding: 11px 17px;
+        font-size: 14px;
     }
 }
