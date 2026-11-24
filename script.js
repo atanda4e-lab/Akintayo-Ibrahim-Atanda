@@ -1,80 +1,91 @@
 // ==========================================
-// 1. DISPLAY THE CURRENT YEAR IN THE FOOTER
+// LEARNSPHERE PORTFOLIO JAVASCRIPT
 // ==========================================
-
-const year = document.getElementById("year");
-
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
 
 
 // ==========================================
-// 2. SELECT NAVIGATION LINKS
+// 1. WAIT FOR THE PAGE TO LOAD
 // ==========================================
 
-const navLinks = document.querySelectorAll(".navbar ul li a");
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ======================================
+    // 2. DISPLAY THE CURRENT YEAR
+    // ======================================
+
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
 
-// ==========================================
-// 3. HANDLE NAVIGATION LINK CLICKS
-// ==========================================
+    // ======================================
+    // 3. SELECT NAVIGATION LINKS
+    // ======================================
 
-navLinks.forEach(function(link) {
+    const navLinks = document.querySelectorAll(".navbar ul li a");
 
-    link.addEventListener("click", function() {
+    navLinks.forEach(function (link) {
 
-        console.log("Navigation link clicked:", link.textContent.trim());
+        link.addEventListener("click", function () {
+
+            console.log(
+                "Navigation clicked:",
+                link.textContent.trim()
+            );
+
+        });
 
     });
 
-});
+
+    // ======================================
+    // 4. COUNT PROJECTS
+    // ======================================
+
+    const projects = document.querySelectorAll(".project-card");
+
+    console.log("Total projects:", projects.length);
 
 
-// ==========================================
-// 4. DISPLAY A WELCOME MESSAGE
-// ==========================================
+    // ======================================
+    // 5. CHECK IMPORTANT SECTIONS
+    // ======================================
 
-console.log("Welcome to Akintayo Ibrahim Atanda's portfolio!");
+    const sections = [
+        "home",
+        "about",
+        "skills",
+        "projects",
+        "education",
+        "contact"
+    ];
 
+    sections.forEach(function (sectionName) {
 
-// ==========================================
-// 5. COUNT THE PROJECTS ON THE WEBSITE
-// ==========================================
+        const section = document.getElementById(sectionName);
 
-const projects = document.querySelectorAll(".project-card");
+        if (section) {
+            console.log(sectionName + " section loaded successfully.");
+        } else {
+            console.warn(sectionName + " section was not found.");
+        }
 
-console.log("Total projects displayed:", projects.length);
-
-
-// ==========================================
-// 6. CHECK THE CONTACT SECTION
-// ==========================================
-
-const contactSection = document.querySelector("#contact");
-
-if (contactSection) {
-    console.log("Contact section loaded successfully.");
-}
-
-
-// ==========================================
-// 7. CHECK THE ABOUT SECTION
-// ==========================================
-
-const aboutSection = document.querySelector("#about");
-
-if (aboutSection) {
-    console.log("About section loaded successfully.");
-}
+    });
 
 
-// ==========================================
-// 8. DISPLAY A MESSAGE WHEN THE PAGE LOADS
-// ==========================================
+    // ======================================
+    // 6. WELCOME MESSAGE
+    // ======================================
 
-window.addEventListener("load", function() {
+    console.log("Welcome to Akintayo Ibrahim Atanda's portfolio!");
 
-    console.log("Portfolio loaded successfully!");
+
+    // ======================================
+    // 7. PAGE LOADED MESSAGE
+    // ======================================
+
+    console.log("Portfolio is ready!");
 
 });

@@ -25,6 +25,11 @@ img {
     display: block;
 }
 
+section {
+    scroll-margin-top: 100px;
+}
+
+
 /* =========================
    NAVIGATION BAR
 ========================= */
@@ -35,7 +40,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
 }
 
 .navbar {
@@ -47,7 +52,7 @@ header {
 
 .logo {
     color: white;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
@@ -65,71 +70,79 @@ header {
     color: white;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 500;
 }
 
 .navbar ul li a:hover {
     color: #59a6ff;
 }
 
+
 /* =========================
-   HOME / HERO SECTION
+   HERO SECTION
 ========================= */
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    padding: 90px 8%;
-    background-color: #101a30;
+    gap: 55px;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #101a30, #172d50);
     color: white;
-    min-height: 500px;
+    min-height: 570px;
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 680px;
 }
 
 .hero-text p:first-child {
     color: #59a6ff;
     font-weight: bold;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 43px;
+    font-size: 48px;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     overflow-wrap: anywhere;
 }
 
 .hero h2 {
-    font-size: 23px;
+    color: #a9cfff;
+    font-size: 24px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
 .hero p {
     margin-bottom: 20px;
+    color: #e1e8f2;
 }
 
 .hero-image img {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #59a6ff;
-    box-shadow: 0 0 30px rgba(89, 166, 255, 0.2);
+    border: 6px solid #59a6ff;
+    box-shadow: 0 0 35px rgba(89, 166, 255, 0.25);
 }
 
-/* HERO BUTTONS */
+
+/* =========================
+   HERO BUTTONS
+========================= */
 
 .btn {
     display: inline-block;
     background-color: #2878e5;
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 13px 26px;
+    border-radius: 6px;
     text-decoration: none;
     margin-top: 10px;
     margin-right: 8px;
@@ -138,20 +151,20 @@ header {
 
 .btn:hover {
     background-color: #175bb5;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
+
 
 /* =========================
    GENERAL SECTION DESIGN
 ========================= */
 
 .section {
-    padding: 70px 8%;
-    scroll-margin-top: 100px;
+    padding: 80px 8%;
 }
 
 .section h2 {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.4;
     margin-bottom: 20px;
     color: #101a30;
@@ -163,8 +176,9 @@ header {
     color: #485469;
 }
 
+
 /* =========================
-   ABOUT ME SECTION
+   ABOUT SECTION
 ========================= */
 
 #about {
@@ -173,7 +187,7 @@ header {
 
 #about > h2 {
     text-align: center;
-    font-size: 34px;
+    font-size: 36px;
 }
 
 #about > p {
@@ -183,24 +197,29 @@ header {
     margin-bottom: 22px;
 }
 
+
+/* =========================
+   DETAILS CARDS
+========================= */
+
 .details {
     margin-top: 30px;
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 32px;
+    border-radius: 12px;
     border: 1px solid #e3e9f2;
-    box-shadow: 0 5px 20px rgba(16, 26, 48, 0.04);
+    box-shadow: 0 5px 22px rgba(16, 26, 48, 0.05);
 }
 
 .details h3 {
     color: #174c91;
-    font-size: 22px;
+    font-size: 23px;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .details p {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #485469;
     overflow-wrap: anywhere;
 }
@@ -222,6 +241,7 @@ header {
     text-decoration: underline;
 }
 
+
 /* =========================
    EDUCATION SECTION
 ========================= */
@@ -232,15 +252,16 @@ header {
 
 #education > h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 #education .details {
-    max-width: 900px;
+    max-width: 950px;
     margin-left: auto;
     margin-right: auto;
     border-left: 5px solid #2878e5;
 }
+
 
 /* =========================
    TECHNICAL SKILLS
@@ -265,14 +286,14 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .skills span {
     background-color: #dceaff;
     color: #174c91;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 11px 21px;
+    border-radius: 7px;
     font-weight: bold;
     border: 1px solid #c7dcff;
     transition: 0.3s ease;
@@ -281,26 +302,9 @@ header {
 .skills span:hover {
     background-color: #2878e5;
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
-/* Support for an alternative skills-list class */
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.skills-list span {
-    background-color: #eaf2ff;
-    color: #174ea6;
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-size: 15px;
-}
 
 /* =========================
    PROJECTS SECTION
@@ -323,47 +327,55 @@ header {
 .project-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    margin-top: 35px;
+    gap: 28px;
+    margin-top: 40px;
 }
 
 .project-card {
     background-color: white;
-    padding: 28px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
     border: 1px solid #e0e5ed;
-    box-shadow: 0 5px 18px rgba(16, 26, 48, 0.04);
+    box-shadow: 0 5px 20px rgba(16, 26, 48, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(16, 26, 48, 0.1);
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(16, 26, 48, 0.12);
 }
 
 .project-card h3 {
     color: #174c91;
-    font-size: 21px;
-    margin-bottom: 12px;
+    font-size: 22px;
+    margin-bottom: 14px;
     line-height: 1.5;
 }
 
 .project-card p {
     color: #485469;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .project-card a {
     display: inline-block;
-    color: #175bb5;
+    background-color: #2878e5;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .project-card a:hover {
-    color: #2878e5;
-    text-decoration: underline;
+    background-color: #175bb5;
+    transform: translateY(-2px);
 }
+
+
+/* =========================
+   PROJECT STATUS
+========================= */
 
 .status {
     display: inline-block;
@@ -373,8 +385,9 @@ header {
     font-style: italic;
     padding: 5px 12px;
     border-radius: 20px;
-    margin-top: 5px;
+    margin-top: 12px;
 }
+
 
 /* =========================
    CONTACT SECTION
@@ -394,7 +407,7 @@ header {
     color: #d6deeb;
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
 }
 
 .contact-links {
@@ -403,29 +416,32 @@ header {
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .contact-links a {
     display: inline-block;
     background-color: #2878e5;
     color: white;
-    padding: 12px 22px;
+    padding: 13px 23px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     overflow-wrap: anywhere;
 }
 
 .contact-links a:hover {
     background-color: #175bb5;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-/* CONTACT INFORMATION CARD */
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
 
 #contact .details {
-    max-width: 700px;
+    max-width: 750px;
     margin: 30px auto 0;
     background-color: #172640;
     border: 1px solid #30415e;
@@ -453,6 +469,7 @@ header {
     color: white;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -461,13 +478,14 @@ footer {
     background-color: #0b1220;
     color: white;
     text-align: center;
-    padding: 25px 8%;
+    padding: 28px 8%;
 }
 
 footer p {
     margin: 5px 0;
     font-size: 14px;
 }
+
 
 /* =========================
    TABLET RESPONSIVENESS
@@ -490,23 +508,25 @@ footer p {
     }
 
     .hero {
-        padding: 70px 5%;
-        gap: 30px;
+        padding: 75px 5%;
+        gap: 35px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 39px;
     }
 
     .hero-image img {
-        width: 240px;
-        height: 240px;
+        width: 250px;
+        height: 250px;
     }
 
     .section {
-        padding: 60px 5%;
+        padding: 65px 5%;
     }
+
 }
+
 
 /* =========================
    MOBILE PHONE DESIGN
@@ -525,7 +545,7 @@ footer p {
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     .navbar ul {
@@ -541,21 +561,21 @@ footer p {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 55px 6%;
+        padding: 60px 6%;
         gap: 30px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .hero h2 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .hero-image img {
-        width: 200px;
-        height: 200px;
+        width: 210px;
+        height: 210px;
     }
 
     .hero .btn {
@@ -563,30 +583,30 @@ footer p {
     }
 
     .section {
-        padding: 50px 6%;
+        padding: 55px 6%;
     }
 
     .section h2,
     #about > h2 {
-        font-size: 27px;
+        font-size: 29px;
     }
 
     .details {
-        padding: 22px;
-        margin-top: 22px;
+        padding: 24px;
+        margin-top: 23px;
     }
 
     .details h3 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .project-container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 22px;
     }
 
     .project-card {
-        padding: 23px;
+        padding: 25px;
     }
 
     .skills {
@@ -594,7 +614,7 @@ footer p {
     }
 
     .skills span {
-        padding: 9px 14px;
+        padding: 9px 15px;
         font-size: 14px;
     }
 
@@ -609,9 +629,11 @@ footer p {
     }
 
     #contact .details {
-        padding: 22px;
+        padding: 23px;
     }
+
 }
+
 
 /* =========================
    SMALL MOBILE PHONES
@@ -620,7 +642,7 @@ footer p {
 @media (max-width: 380px) {
 
     .hero h1 {
-        font-size: 27px;
+        font-size: 28px;
     }
 
     .hero h2 {
@@ -636,15 +658,16 @@ footer p {
     }
 
     .details {
-        padding: 18px;
+        padding: 19px;
     }
 
     .project-card {
-        padding: 18px;
+        padding: 19px;
     }
 
     .btn {
         padding: 11px 17px;
         font-size: 14px;
     }
+
 }
